@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html ng-app="eventApp">
+  <head>
+    <base href="/">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Angular Stack Setup</title>
+    <!-- inject:js -->
+    <!-- endinject -->
+    <!-- inject:css -->
+    <!-- endinject -->
+  </head>
+  <body ng-controller="MainCtrl as main" ng-class="main.pageName">
+    <header>
+      <nav>
+        <ul>
+          <li><a ui-sref="home">EventApp</a></li>
+
+          <li ng-if="!main.isAuthenticated()"><a ui-sref="login" ui-sref-active="active">Login</a></li>
+          <li ng-if="!main.isAuthenticated()"><a ui-sref="register" ui-sref-active="active">Register</a></li>
+          <li ng-if="main.isAuthenticated()"><a ng-click="main.logout()" href="#">Logout</a></li>
+          <li ng-if="main.isAuthenticated()"><a ui-sref="eventsNew" ui-sref-active="active">New Event</a></li>
+          <li><a ui-sref="eventsIndex" ui-sref-active="active">Events</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div class="message" ng-if="main.message">
+      <div class="container">{{main.message}}</div>
+    </div>
+    <main ui-view></main>
+  </body>
+</html>

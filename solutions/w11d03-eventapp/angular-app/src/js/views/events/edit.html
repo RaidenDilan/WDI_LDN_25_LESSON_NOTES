@@ -1,0 +1,19 @@
+<div class="row">
+  <div class="col-md-6">
+    <form ng-submit="eventsEdit.update()">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" ng-model="eventsEdit.event.name">
+      <label for="date">Date</label>
+      <input type="date" id="date" name="date" ng-model="eventsEdit.event.date">
+      <label for="location">Location</label>
+      <input type="text" id="location" name="location" ng-model="eventsEdit.event.location">
+
+      <label>Attendees</label>
+      <label ng-repeat="user in eventsEdit.users">
+        <input type="checkbox" name="attendees" checklist-model="eventsEdit.event.attendee_ids" checklist-value="user.id">{{ user.username }}
+      </label>
+
+      <button>Update</button>
+    </form>
+  </div>
+</div>

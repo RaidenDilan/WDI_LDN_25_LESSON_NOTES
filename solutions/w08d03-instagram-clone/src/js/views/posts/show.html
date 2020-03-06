@@ -1,0 +1,23 @@
+<div class="row post">
+  <div class="col-md-6">
+    <img ng-src="{{ postsShow.post.imageSRC }}">
+  </div>
+  <div class="col-md-6">
+    <h3>{{ postsShow.post.createdBy.username }}</h3>
+    <p>{{ postsShow.post.caption }}</p>
+    <button ng-click="postsShow.delete()" class="button" ng-if="main.isAuthenticated() && main.currentUser.userId === postsShow.post.createdBy.id">Delete</button>
+
+    <div class="comments">
+      <h2>Comments</h2>
+      <ul class="comments__created">
+        <li ng-repeat="comment in postsShow.post.comments track by $index"><strong>{{ comment.createdBy.username }}</strong> - {{ comment.text }} <button class="button" ng-click="postsShow.deleteComment(comment)" ng-if="main.isAuthenticated() && main.currentUser.userId === comment.createdBy.id">Delete</button></li>
+      </ul>
+      <form ng-submit="postsShow.addComment()" ng-if="main.isAuthenticated()">
+        <label>Add comment</label>
+        <textarea ng-model="postsShow.newComment.text"></textarea>
+        <button class="button button--full">Comment</button>
+      </form>
+
+    </div>
+  </div>
+</div>

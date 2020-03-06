@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html ng-app="flightsApp">
+<head>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FLIGHTS</title>
+  <link href="https://fonts.googleapis.com/css?family=Karla:400,400i,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Space+Mono" rel="stylesheet">
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBL4-YwWe649TqJJAs1bElrtZ39ReB1xlA"></script>
+  <!-- inject:js -->
+  <!-- endinject -->
+  <!-- inject:css -->
+  <!-- endinject -->
+</head>
+<body ng-controller="MainCtrl as main">
+  <header>
+    <ul class="container">
+      <li><a ui-sref="citiesIndex">FLIGHTS</a></li>
+      <li><a ui-sref="citiesIndex">All cities</a></li>
+      <li><a ui-sref="citiesNew">Add a city</a></li>
+    </ul>
+  </header>
+  <main ui-view class="container"></main>
+</body>
+</html>

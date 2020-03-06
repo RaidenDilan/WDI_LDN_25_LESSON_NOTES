@@ -1,0 +1,37 @@
+<h1>Edit Film</h1>
+
+<form method="POST" action="/films/<%= film.id %>">
+  <input type="hidden" name="_method" value="PUT">
+  <div class="form-group">
+    <label for="name">Name</label>
+    <input type="text" name="name" id="name" placeholder="Name" class="form-control" value="<%= film.name %>">
+  </div>
+  <div class="form-group">
+    <label for="releaseDate">Release Date</label>
+    <input type="date" name="releaseDate" id="releaseDate" class="form-control" value="<%= film.releaseDate %>">
+  </div>
+  <div class="form-group">
+    <label for="synopsis">Synopsis</label>
+    <textarea name="synopsis" id="synopsis" placeholder="Synopsis" class="form-control"><%= film.synopsis %></textarea>
+  </div>
+  <div class="form-group">
+    <label for="genre">Genre</label>
+    <select name="genre" id="genre" class="form-control select2">
+      <% genres.forEach((genre) => { %>
+        <option <% if(film.genre === genre) { %>selected<% } %>><%= genre %></option>
+      <% }) %>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="wikipedia">Wikipedia Link</label>
+    <input type="text" name="wikipedia" id="wikipedia" placeholder="Wikipedia Link" class="form-control" value="<%= film.wikipedia %>">
+  </div>
+  <div class="form-group">
+    <label>Images</label>
+    <input type="text" name="images[]" class="form-control" value="<%= film.images[0] %>">
+    <input type="text" name="images[]" class="form-control" value="<%= film.images[1] %>">
+    <input type="text" name="images[]" class="form-control" value="<%= film.images[2] %>">
+  </div>
+
+  <button class="btn btn-primary">Add</button>
+</form>

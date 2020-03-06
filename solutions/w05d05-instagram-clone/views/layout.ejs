@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>instagram</title>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="/login">Login</a></li>
+        <li><a href="/user">Profile</a></li>
+      </ul>
+    </nav>
+    <% for(const type in messages) { %>
+      <div class="<%= type %>">
+        <h5><%= messages[type] %></h5>
+      </div>
+    <% } %>
+    <main>
+      <%- body %>
+    </main>
+  </body>
+</html>

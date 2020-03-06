@@ -1,0 +1,29 @@
+<h1>Films</h1>
+
+<% if(locals.isLoggedIn) { %>
+  <a href="/films/new" class="btn btn-primary">Add</a>
+<% } %>
+
+<div class="row">
+  <% films.forEach((film) => { %>
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-img-top" style="background-image:url(<%= film.images[0] %>)" alt="<%= film.name %>"></div>
+        <div class="card-block">
+          <a href="/films/<%= film.id %>">
+            <h4 class="card-title"><%= film.name %></h4>
+          </a>
+          <p class="card-text"><%= film.genre %></p>
+
+          <% if(locals.isLoggedIn) { %>
+            <a href="/films/<%= film.id %>/edit" class="btn btn-primary">Edit</a>
+            <form method="POST" action="/films/<%= film.id %>">
+              <input type="hidden" name="_method" value="DELETE">
+              <button class="btn btn-danger">Delete</button>
+            </form>
+          <% } %>
+        </div>
+      </div>
+    </div>
+  <% }) %>
+</div>

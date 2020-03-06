@@ -1,0 +1,134 @@
+// SASS Variabels
+$black: #000;
+$blue: #113b92;
+
+// SASS Extends
+.container {
+  max-width: 960px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+// Default
+body {
+  font-family: 'Inconsolata', monospace;
+  color: $blue;
+}
+
+strong {
+  font-weight: bold;
+}
+
+a {
+  color: $black;
+  text-decoration: none;
+}
+
+input, button {
+  font-family: 'Inconsolata', monospace;
+  color: $blue;
+}
+
+main {
+  @extend .container;
+}
+
+// Form
+form {
+  label {
+    display: block;
+  }
+  label, input {
+    margin-bottom: 10px;
+  }
+  button, input {
+    border: 1px solid $blue;
+    padding: 5px 10px;
+  }
+  input {
+    outline: none !important;
+    &:focus {
+      border-width: 2px;
+      padding: 4px 9px;
+    }
+  }
+  button {
+    background-color: #FFF;
+    color: $blue;
+    cursor: pointer;
+    &:hover {
+      background-color: $blue;
+      color: #FFF;
+    }
+  }
+}
+
+// Header
+header {
+  border-bottom: 1px solid lighten($blue, 50%);
+  nav {
+    height: 50px;
+    @extend .container;
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      li {
+        display: inline-block;
+        line-height: 50px;
+        margin-right: 10px;
+        a {
+          color: $blue;
+          &:hover {
+            text-decoration: underline;
+          }
+          &.logo {
+            font-weight: bold;
+            &:hover {
+              text-decoration: none;
+            }
+          }
+        }
+        &:last-of-type {
+          float: right;
+        }
+        .message {
+          color: $blue;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
+
+// Homepage
+.home {
+  background-color: $blue;
+  height: calc(100vh - 50px);
+  position: relative;
+  h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: #FFF;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    text-align: center;
+    font-weight: normal;
+    a {
+      color: #FFF;
+      text-decoration: underline;
+      font-weight: bold;
+    }
+  }
+}
+
+// Map
+#map {
+  height: calc(100vh - 50px);
+}
+
+.infowindow {
+  font-family: 'Inconsolata', monospace;
+  color: $blue;
+}

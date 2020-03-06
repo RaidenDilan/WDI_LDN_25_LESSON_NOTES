@@ -1,0 +1,253 @@
+@import 'vendor/reset.scss';
+@import 'vendor/bootstrap/bootstrap-grid.scss';
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:300,400,600');
+
+// Variables
+$grey: #2d2d2d;
+
+// Extends
+.title-styles {
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+// Styles
+body {
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 300;
+  color: $grey;
+}
+
+main {
+  padding-bottom: 20px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+p {
+  line-height: 1.3;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+h2 {
+  @extend .title-styles;
+  margin-bottom: 20px;
+  text-decoration: underline;
+}
+
+img {
+  max-width: 100%;
+}
+
+strong {
+  font-weight: 600;
+}
+
+header {
+  height: 50px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid $grey;
+  ul {
+    li {
+      line-height: 50px;
+      display: inline-block;
+      margin-right: 15px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 12px;
+      &.logo {
+        font-weight: 600;
+        font-size: 16px;
+      }
+      &.burger {
+        display: none;
+        cursor: pointer;
+      }
+      a {
+        &.active {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+  .dropdown {
+    display: inline-block;
+  }
+}
+
+.posts {
+  &__single {
+    border: 1px solid $grey;
+    padding: 10px;
+    margin-bottom: 20px;
+    &-image {
+      margin-bottom: 10px;
+      cursor: pointer;
+      background-position: center;
+      background-size: cover;
+      &:after {
+        content: '';
+        display: block;
+        padding: 50%;
+      }
+    }
+  }
+}
+
+.post {
+  h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  p {
+    margin-bottom: 20px;
+  }
+}
+
+.button {
+  background-color: white;
+  border: 1px solid $grey;
+  padding: 6px 8px;
+  font-size: 12px;
+  font-weight: 300;
+  cursor: pointer;
+  color: $grey;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  &--full {
+    width: 100%;
+  }
+  &:hover, &:focus {
+    border: 2px solid $grey;
+    padding: 5px 7px;
+    outline: none !important;
+  }
+}
+
+.comments {
+  margin-top: 40px;
+  &__created {
+    margin-bottom: 40px;
+    li {
+      margin-bottom: 5px;
+      line-height: 1.3;
+      .button {
+        font-size: 8px;
+        padding: 4px 6px;
+        margin-left: 5px;
+        &:hover {
+          padding: 3px 5px;
+        }
+      }
+    }
+  }
+}
+
+// Form styles
+form {
+  label {
+    @extend .title-styles;
+    margin-bottom: 20px;
+    display: block;
+    font-size: 14px;
+  }
+  input {
+    margin-bottom: 20px;
+  }
+  input[type='text'],
+  input[type='password'],
+  input[type='email'],
+  textarea {
+    background-color: white;
+    border: 1px solid $grey;
+    padding: 6px 8px;
+    font-weight: 300;
+    color: $grey;
+    width: 100%;
+    &:focus {
+      outline: none !important;
+      border: 2px solid $grey;
+      padding: 5px 7px;
+    }
+  }
+  textarea {
+    height: 75px;
+    resize: none;
+    margin-bottom: 5px;
+    font-size: 14px;
+  }
+  button {
+    width: 100%;
+    &:not(:last-of-type) {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+// Flash messages
+.message {
+  background-color: white;
+  border: 1px solid $grey;
+  padding: 6px 8px;
+  font-size: 12px;
+  color: $grey;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+
+// Form validation
+.error {
+  text-transform: uppercase;
+  padding: 6px 8px;
+  font-size: 12px;
+  background-color: #cccccc;
+  font-weight: 300;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 767px) {
+  .post {
+    img {
+      margin-bottom: 20px;
+    }
+  }
+  header {
+    ul {
+      li {
+        margin: 0;
+        &.burger {
+          float: right;
+          display: block;
+        }
+      }
+    }
+    .dropdown {
+      display: none;
+      position: absolute;
+      right: 0;
+      top: 50px;
+      background-color: white;
+      z-index: 10;
+      text-align: right;
+      padding: 15px;
+      border-width: 0 1px 1px;
+      border-style: solid;
+      border-color: $grey;
+      &.open {
+        display: block;
+      }
+      li {
+        display: block;
+      }
+    }
+  }
+}

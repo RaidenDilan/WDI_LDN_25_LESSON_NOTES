@@ -1,0 +1,14 @@
+h1 {
+  font-weight: 300;
+  color: #808c99;
+  font-size: 4em;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: #c69;
+  &:hover {
+    text-decoration: underline;
+  }
+}

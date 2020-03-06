@@ -1,0 +1,8 @@
+<div class="row posts">
+  <div ng-repeat="post in postsIndex.all" class="col-md-3 col-sm-4">
+    <div class="posts__single">
+      <div class="posts__single-image" style="background-image:url('{{ post.imageSRC }}')" ui-sref="postsShow({ id: post.id })"></div>
+      <p><strong>{{ post.createdBy.username }}</strong></p>
+    </div>
+  </div>
+</div>

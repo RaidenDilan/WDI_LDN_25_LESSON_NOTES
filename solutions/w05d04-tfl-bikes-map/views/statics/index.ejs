@@ -1,0 +1,7 @@
+<% if (locals.isAuthenticated) { %>
+  <div id="map" data-postcode="<%= user.postcode %>"></div>
+<% } else { %>
+  <div class="home">
+    <h1><a href="/login">Log in</a> to view the TFL Bikes</h1>
+  </div>
+<% } %>

@@ -1,0 +1,68 @@
+body {
+  font-family: 'Space Mono', monospace;
+  text-align: center;
+}
+
+main {
+  margin: 50px;
+}
+
+input, button {
+  font-family: 'Space Mono', monospace;
+  border: 2px solid dodgerblue;
+  padding: 5px 10px;
+  color: dodgerblue;
+  background-color: white;
+  font-size: 24px;
+  outline: none !important;
+}
+
+input[type="text"] {
+  width: 110px;
+}
+
+input[type="submit"], button {
+  cursor: pointer;
+  margin-bottom: 30px;
+}
+
+input[type="submit"]:hover, button:hover {
+  background-color: dodgerblue;
+  color: white;
+}
+
+.feedback {
+  font-size: 24px;
+}
+
+.hidden {
+  display: none;
+}
+
+.display, .score-board  {
+  margin-bottom: 30px;
+  font-size: 24px;
+}
+
+.feedback {
+  font-weight: bold;
+}
+
+.timer {
+  height: 70px;
+  width: 70px;
+  border: 5px solid dodgerblue;
+  position: relative;
+  border-radius: 50%;
+  font-size: 36px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 70px;
+  color: dodgerblue;
+  margin: 0 auto 30px;
+}
+
+.timer.active {
+  background-color: dodgerblue;
+  color: white;
+}

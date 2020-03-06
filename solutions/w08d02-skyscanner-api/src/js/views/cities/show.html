@@ -1,0 +1,36 @@
+<div class="row ">
+  <div class="col-md-12">
+
+    <div class="flightsBoard">
+      <h2>Flights to {{ citiesShow.city.name }}</h2>
+      <div class="row">
+        <div class="col-md-3">
+          <h3>Date</h3>
+        </div>
+        <div class="col-md-2">
+          <h3>Price</h3>
+        </div>
+        <div class="col-md-4">
+          <h3>Airline</h3>
+        </div>
+      </div>
+
+      <ul>
+        <li ng-repeat="flight in citiesShow.flights">
+          <div class="row">
+            <div class="col-md-3">
+              <p>{{ flight.OutboundLeg.DepartureDate | date:'dd-MM-yyyy' }}</p>
+            </div>
+            <div class="col-md-2">
+              <p>£{{ flight.MinPrice}}</p>
+            </div>
+            <div class="col-md-4">
+              <p>{{ flight.CarrierName}}</p>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+</div>

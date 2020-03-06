@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>tfl-bikes</title>
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDc7hNgWybvVmyFoxffU6oAKwOBif-cJIo"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" charset="utf-8"></script>
+    <script src="/js/mapStyles.js" charset="utf-8"></script>
+    <script src="/js/app.js" charset="utf-8"></script>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="/" class="logo">TFL Bikes</a></li>
+          <% if (!locals.isAuthenticated) { %>
+          <li><a href="/login">Login</a></li>
+          <li><a href="/register">Register</a></li>
+          <% } else { %>
+          <li><a href="/logout">Logout</a></li>
+          <% } %>
+          <li>
+            <% for(const type in messages) { %>
+              <div class="message <%= type %>">
+                <%= messages[type] %>
+              </div>
+            <% } %>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <%- body %>
+  </body>
+</html>

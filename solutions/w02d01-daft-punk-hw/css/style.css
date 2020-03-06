@@ -1,0 +1,30 @@
+* {
+  box-sizing: border-box;
+
+}
+body {
+  background-color: black;
+  text-align: center;
+}
+
+img {
+  height: 200px;
+  width: 200px;
+}
+
+main {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+p {
+  line-height: 45px;
+  vertical-align: middle;
+  font-weight: bold;
+  font-family: 'Roboto', sans-serif;
+}
+
+div:hover {
+  background-color: #212121;
+
+}

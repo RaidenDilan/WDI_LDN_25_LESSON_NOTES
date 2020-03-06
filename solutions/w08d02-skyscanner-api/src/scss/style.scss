@@ -1,0 +1,84 @@
+@import 'vendor/bootstrap/bootstrap';
+
+$green: #26b365;
+
+body, input, button {
+  font-family: 'Karla', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+ul, li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.flightsBoard {
+  font-family: 'Space Mono', monospace;
+  background-color: #232323;
+  text-transform: uppercase;
+  padding: 20px;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+  h2 {
+    color: white;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  h3 {
+    color: yellow;
+    font-size: 14px;
+  }
+  p {
+    color: white;
+    background-color: #191818;
+    padding: 0 4px;
+  }
+  a {
+    color: white;
+    text-decoration: none;
+    &:hover, &:focus {
+      color: white;
+    }
+  }
+}
+
+main {
+  background-color: #f7f7f7;
+  padding: 15px 0;
+  margin-top: 15px;
+}
+
+header {
+  background-color: #333;
+  overflow: hidden;
+  height: 40px;
+  color: white;
+  ul {
+    list-style: none;
+    margin-top: 0;
+    li {
+      float: left;
+      line-height: 40px;
+      &:first-child {
+        font-family: 'Space Mono', monospace;
+        letter-spacing: 2px;
+      }
+      &:not(:last-child) {
+        margin-right: 20px;
+      }
+      a {
+        text-decoration: none;
+        color: white;
+        &:hover, &:focus {
+          color: white;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}

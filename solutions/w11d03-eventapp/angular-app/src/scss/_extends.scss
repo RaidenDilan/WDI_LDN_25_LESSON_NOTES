@@ -1,0 +1,52 @@
+.border {
+  border-width: 2px;
+  border-style: solid;
+  padding: 15px;
+  border-radius: 2px;
+  margin-bottom: 20px;
+}
+
+.border--pink {
+  border-color: $brand-primary;
+}
+
+.border--blue {
+  border-color: $brand-secondary;
+}
+
+.button {
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 2px;
+  padding: 5px 10px;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: white;
+  font-weight: 500;
+  letter-spacing: 2px;
+  transition: all 0.2s ease;
+  &:hover {
+    cursor: pointer;
+  }
+  &:focus {
+    outline: none !important;
+  }
+}
+
+.button--blue {
+  border-color: $brand-secondary;
+  background-color: $brand-secondary;
+  &:hover, &:focus {
+    border-color: lighten($brand-secondary, 5%);
+    background-color: lighten($brand-secondary, 5%);
+  }
+}
+
+.button--pink {
+  border-color: $brand-primary;
+  background-color: $brand-primary;
+  &:hover, &:focus {
+    border-color: lighten($brand-primary, 5%);
+    background-color: lighten($brand-primary, 5%);
+  }
+}
