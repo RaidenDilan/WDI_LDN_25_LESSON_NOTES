@@ -1,0 +1,19 @@
+.card .card-img-top,.carousel .carousel-item {
+  background-position:center;
+  background-repeat:no-repeat;
+}
+
+.card .card-img-top {
+  height:250px;
+  background-size:cover;
+}
+
+.card form {
+  display: inline-block;
+}
+
+.carousel .carousel-item {
+  height:500px;
+  background-size:contain;
+}
+

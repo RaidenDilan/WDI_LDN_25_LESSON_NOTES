@@ -1,0 +1,20 @@
+<div class="row">
+
+  <div class="col-xs-12">
+    <div uib-carousel active="birdsIndex.active" interval="birdsIndex.myInterval" no-wrap="birdsIndex.noWrapSlides">
+      <div uib-slide ng-repeat="bird in birdsIndex.all" index="$index">
+        <img ng-src="{{bird.image}}" style="margin:auto;">
+        <div class="carousel-caption">
+          <h4>{{bird.name}}</h4>
+          <p><strong>{{bird.latinName}}</strong> <em>{{ bird.family }}</em></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div ng-repeat="bird in birdsIndex.all" class="col-sm-6">
+    <img ng-src="{{ bird.image }}" class="img-responsive">
+    <a ui-sref="birdsShow({ id: bird.id })"><h2>{{ bird.name }}</h2></a>
+    <p><strong>{{ bird.latinName }}</strong> <em>{{ bird.family }}</em></p>
+  </div>
+</div>
