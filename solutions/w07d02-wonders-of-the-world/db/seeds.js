@@ -18,7 +18,7 @@ Wonder
       lat: 40.432087,
       lng: 116.570375
     }
-  },{
+  }, {
     name: 'Christ the Redeemer Statue',
     country: 'Brazil',
     image: 'http://i.imgur.com/UbElY8i.jpg',
@@ -26,7 +26,7 @@ Wonder
       lat: -22.951946,
       lng: -43.210497
     }
-  },{
+  }, {
     name: 'Machu Picchu',
     country: 'Peru',
     image: 'http://i.imgur.com/sO28Y3j.jpg',
@@ -34,7 +34,7 @@ Wonder
       lat: 13.162974,
       lng: -72.544984
     }
-  },{
+  }, {
     name: 'Chichen Itza',
     country: 'Mexico',
     image: 'http://i.imgur.com/UX0eXfj.jpg',
@@ -42,7 +42,7 @@ Wonder
       lat: 20.684295,
       lng: -88.567772
     }
-  },{
+  }, {
     name: 'The Roman Colosseum',
     country: 'Italy',
     image: 'http://i.imgur.com/d2IedTx.jpg',
@@ -50,7 +50,7 @@ Wonder
       lat: 41.890218,
       lng: 12.492188
     }
-  },{
+  }, {
     name: 'Taj Majal',
     country: 'India',
     image: 'http://i.imgur.com/UrqXcrc.jpg',
@@ -58,7 +58,7 @@ Wonder
       lat: 27.175015,
       lng: 78.042134
     }
-  },{
+  }, {
     name: 'Petra',
     country: 'Jordan',
     image: 'http://i.imgur.com/pNcqT6s.jpg',

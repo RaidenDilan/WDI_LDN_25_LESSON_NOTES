@@ -19,21 +19,15 @@ $(() => {
     const bottomOfHeader = $header.offset().top + $header.height();
     const viewportHeight = $window.height();
 
-    if (bottomOfHeader >= viewportHeight) {
-      $header.addClass('opaque');
-    } else {
-      $header.removeClass('opaque');
-    }
+    (bottomOfHeader >= viewportHeight) ? $header.addClass('opaque') : $header.removeClass('opaque');
   }
 
   function scrollToSection() {
     const section = $(this).attr('href');
-    $('body').animate( {
+    $('body').animate({
       scrollTop: $(section).offset().top
     }, 1000, () => {
-      if ($window.width() < 575) {
-        $('.dropdown').slideToggle();
-      }
+      ($window.width() < 575) && $('.dropdown').slideToggle();
     });
   }
 
@@ -48,10 +42,10 @@ $(() => {
       scrollwheel: false
     });
 
+    // const marker = new google.maps.Marker({
     new google.maps.Marker({
       position: latLng,
       map: map
     });
   }
-
 });

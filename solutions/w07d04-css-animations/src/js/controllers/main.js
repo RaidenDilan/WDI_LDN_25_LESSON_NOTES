@@ -3,7 +3,7 @@ angular
   .controller('MainCtrl', MainCtrl);
 
 MainCtrl.$inject = ['$rootScope'];
-function MainCtrl($rootScope){
+function MainCtrl($rootScope) {
   const vm = this;
 
 

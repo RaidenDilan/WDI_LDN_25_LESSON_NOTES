@@ -16,7 +16,7 @@ User
     email: 'mike.hayden@ga.co',
     password: 'password',
     passwordConfirmation: 'password'
-  },{
+  }, {
     username: 'eisacke',
     email: 'emily.isacke@ga.co',
     password: 'password',

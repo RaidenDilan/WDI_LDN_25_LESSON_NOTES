@@ -4,9 +4,7 @@ window.addEventListener('DOMContentLoaded', () => {
   const button = document.getElementById('toggle');
   const circle = document.getElementsByClassName('circle')[0];
 
-  button.addEventListener('click', () => {
-    circle.classList.toggle('pulse');
-  });
+  button.addEventListener('click', () => circle.classList.toggle('pulse'));
 
   // Task 2
   const select = document.querySelector('select');
@@ -27,9 +25,7 @@ window.addEventListener('DOMContentLoaded', () => {
       current.innerHTML = currentName;
     });
 
-    names[i].addEventListener('mouseout', () => {
-      current.innerHTML = '';
-    });
+    names[i].addEventListener('mouseout', () => current.innerHTML = '');
   }
 
   // Task 4
@@ -47,11 +43,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
   window.addEventListener('scroll', () => {
     const scroll = window.scrollY;
-    if (scroll > 40) {
-      heading.classList.add('fadeOutUp');
-    } else {
-      heading.classList.remove('fadeOutUp');
-    }
+    scroll > 40 ? heading.classList.add('fadeOutUp') : heading.classList.remove('fadeOutUp');
   });
 
 });

@@ -45,7 +45,7 @@ function EventsShowCtrl(Event, User, Comment, $stateParams, $state, $auth) {
 
   function eventsUpdate() {
     Event
-      .update({id: vm.event.id, event: vm.event });
+      .update({ id: vm.event.id, event: vm.event });
   }
 
   function addComment() {
@@ -79,7 +79,8 @@ function EventsShowCtrl(Event, User, Comment, $stateParams, $state, $auth) {
     if (index > -1) {
       vm.event.attendee_ids.splice(index, 1);
       vm.event.attendees.splice(index, 1);
-    } else {
+    }
+    else {
       vm.event.attendee_ids.push(vm.currentUser.id);
       vm.event.attendees.push(vm.currentUser);
     }
@@ -108,7 +109,7 @@ function EventsEditCtrl(Event, User, $stateParams, $state) {
 
   function eventsUpdate() {
     Event
-      .update({id: vm.event.id, event: vm.event })
+      .update({ id: vm.event.id, event: vm.event })
       .$promise
       .then(() => $state.go('eventsShow', { id: vm.event.id }));
   }

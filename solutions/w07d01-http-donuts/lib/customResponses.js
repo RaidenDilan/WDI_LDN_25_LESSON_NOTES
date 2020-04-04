@@ -4,7 +4,7 @@ function customResponses(req, res, next) {
     err.status = 404;
 
     throw err;
-  }
+  };
 
   res.badRequest = function badRequest(errors) {
     const err = new Error('Bad Request');
@@ -12,14 +12,14 @@ function customResponses(req, res, next) {
     err.errors = errors;
 
     throw err;
-  }
+  };
 
   res.unauthorized = function unauthorized() {
     const err = new Error('Unauthorized');
     err.status = 401;
 
     throw err;
-  }
+  };
 
   next();
 }

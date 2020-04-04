@@ -11,7 +11,7 @@ function customResponses(req, res, next) {
     res.redirect(url);
   };
 
-  res.unauthorized = function(url='/login', message='You must be logged in') {
+  res.unauthorized = function(url = '/login', message = 'You must be logged in') {
     req.flash('alert', message);
     res.redirect(url);
   };

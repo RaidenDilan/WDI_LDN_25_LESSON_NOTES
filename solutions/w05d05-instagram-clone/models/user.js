@@ -7,7 +7,7 @@ const imageSchema = new mongoose.Schema({
 });
 
 imageSchema.virtual('src')
-  .get(function getImageSRC(){
+  .get(function getImageSRC() {
     if(!this.filename) return null;
     return `https://s3-eu-west-1.amazonaws.com/mickyginger/${this.filename}`;
   });
@@ -17,14 +17,14 @@ const userSchema = new mongoose.Schema({
   email: { type: String },
   password: { type: String },
   profileImage: { type: String },
-  images: [ imageSchema ],
+  images: [imageSchema],
   githubId: { type: String }
-},{
+}, {
   timestamps: true
 });
 
 userSchema.virtual('profileImageSRC')
-  .get(function getProfileImageSRC(){
+  .get(function getProfileImageSRC() {
     if(!this.profileImage) return null;
     if(this.profileImage.match(/^http/)) return this.profileImage;
     return `https://s3-eu-west-1.amazonaws.com/mickyginger/${this.profileImage}`;

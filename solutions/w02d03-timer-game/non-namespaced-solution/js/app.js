@@ -17,7 +17,7 @@ $(() => {
   $(document).on('keydown', (event) => {
     var keyboardKey = event.keyCode;
 
-    // TODO: should only run when input is in focus
+    /** @TODO: should only run when input is in focus */
     switch(keyboardKey) {
       case 13:
         checkForMatch();
@@ -30,7 +30,8 @@ $(() => {
     if (computerAnswer === userAnswer) {
       $feedback.html('It\'s a match!');
       userScore++;
-    } else {
+    }
+    else {
       $feedback.html('Incorrect!');
       userScore--;
     }

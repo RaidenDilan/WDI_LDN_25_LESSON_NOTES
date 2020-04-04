@@ -16,7 +16,7 @@ mongoose.connect(dbURI, { useMongoClient: true });
 if(env !== 'test') app.use(morgan('dev'));
 
 app.use(express.static(`${__dirname}/public`));
-app.use(bodyParser.json({limit: '5mb'}));
+app.use(bodyParser.json({ limit: '5mb' }));
 
 app.use(customResponses);
 app.use('/api', routes);

@@ -23,7 +23,8 @@ game.checkForMatch = function checkForMatch() {
   if (this.computerAnswer === userAnswer) {
     this.$feedback.html('It\'s a match!');
     this.userScore++;
-  } else {
+  }
+  else {
     this.$feedback.html('Incorrect!');
     this.userScore--;
   }
@@ -68,7 +69,7 @@ game.enterKeydown = function enterKeydown(event) {
   this.keyboardKey = event.keyCode;
   console.log('event.keyCode', event.keyCode);
   console.log('$(event.keyCode)', $(event.keyCode));
-  // TODO: should only run when input is in focus
+  /** @TODO: should only run when input is in focus */
   switch(this.keyboardKey) {
     case 13:
       this.checkForMatch();

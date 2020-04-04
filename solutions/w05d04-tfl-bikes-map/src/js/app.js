@@ -54,8 +54,8 @@ $(() => {
 
     // Locate the data that we need from the individual bike object
     const locationName = location.commonName;
-    const noOfBikes = location.additionalProperties.find(obj => obj.key === 'NbBikes').value;
-    const noOfSpaces = location.additionalProperties.find(obj => obj.key === 'NbEmptyDocks').value;
+    const noOfBikes = location.additionalProperties.find((obj) => obj.key === 'NbBikes').value;
+    const noOfSpaces = location.additionalProperties.find((obj) => obj.key === 'NbEmptyDocks').value;
 
     // Update the infowindow variable to be a new Google InfoWindow
     infowindow = new google.maps.InfoWindow({

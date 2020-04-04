@@ -11,7 +11,7 @@ FundRaiser = {
       this.buttons[button].onclick = FundRaiser.updateProgressBar.bind(FundRaiser);
     }
     // initial animation
-    setTimeout(() => TweenMax.set(this.progress, { value: 43 }), 250);
+    setTimeout(() => (this.progress.value = 43), 250);
   },
   updateProgressBar: (e) => {
     this.progress.value >= 100 && (!1);
@@ -21,8 +21,8 @@ FundRaiser = {
     100 - newValue < 5 && (this.buttons[1].disabled = true);
     100 - newValue < 1 && (this.buttons[0].disabled = true, this.message.innerHTML = 'Congratulations! You have reached your target!');
 
-    TweenMax.set(this.progress, { value: newValue });
-    TweenMax.set(this.amount, { textContent: 100 - newValue });
+    this.progress.value = newValue;
+    this.amount.textContent = 100 - newValue;
   }
 };
 

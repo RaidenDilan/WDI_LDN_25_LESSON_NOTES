@@ -1,11 +1,9 @@
 require 'date'
 
 class Student
-
   attr_reader :classes, :name, :school, :enrollment_date, :graduation_date
 
   def initialize(name, school, enrollment_date)
-
     raise 'Invalid date' unless enrollment_date.is_a? Date
 
     @name = name
@@ -18,11 +16,9 @@ class Student
   def join_class(class_name)
     @classes << class_name
   end
-
 end
 
 class Vehicle
-
   attr_accessor :owner, :color, :sale_price
   attr_reader :license_plate, :manufacture_date
 
@@ -39,14 +35,12 @@ class Vehicle
 end
 
 class Car < Vehicle
-
   attr_reader :transmission
 
   WHEELS = 4
 
   def initialize(license_plate, manufacture_date, color, sale_price, transmission)
     super(license_plate, manufacture_date, color, sale_price)
-
     self.transmission=(transmission)
   end
 
@@ -57,7 +51,6 @@ class Car < Vehicle
 end
 
 class Motorbike < Vehicle
-
   WHEELS = 2
 
   def initialize(license_plate, manufacture_date, color, sale_price)
@@ -66,7 +59,6 @@ class Motorbike < Vehicle
 end
 
 class Product
-
   attr_reader :sku
   attr_accessor :name, :origin, :color, :description, :image, :price
 
@@ -82,7 +74,6 @@ class Product
 end
 
 class Cart
-
   attr_reader :products
 
   def initialize
@@ -107,14 +98,12 @@ student.join_class("WDI")
 
 p student
 
-
 # CAR
 
 car = Car.new "BD51 SMR", Date.new(1999,10,10), "Aqua", 1250, "manual"
 car.transmission = "automatic"
 car.owner = "Mike Hayden"
 p car
-
 
 # PRODUCT
 

@@ -5,7 +5,7 @@ const { secret } = require('../config/environment');
 function register(req, res, next) {
   User
     .create(req.body)
-    .then(() => res.json({ message: 'Registration successful'}))
+    .then(() => res.json({ message: 'Registration successful' }))
     .catch(next);
 }
 

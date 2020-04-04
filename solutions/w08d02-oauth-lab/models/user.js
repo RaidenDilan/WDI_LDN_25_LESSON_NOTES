@@ -7,7 +7,7 @@ const userSchema = new mongoose.Schema({
   image: { type: String },
   password: { type: String },
   githubId: { type: Number },
-  facebookId: { type: String}
+  facebookId: { type: String }
 });
 
 userSchema
@@ -20,7 +20,7 @@ userSchema.pre('validate', function checkPassword(next) {
   if(!this.password && !this.githubId && !this.facebookId) {
     this.invalidate('password', 'required');
   }
-  if(this.isModified('password') && this._passwordConfirmation !== this.password){
+  if(this.isModified('password') && this._passwordConfirmation !== this.password) {
     this.invalidate('passwordConfirmation', 'does not match');
   }
   next();

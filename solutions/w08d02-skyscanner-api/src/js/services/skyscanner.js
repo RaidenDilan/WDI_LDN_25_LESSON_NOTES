@@ -10,14 +10,14 @@ function Skyscanner($http) {
       .then((response) => {
         console.log(response);
         response.data.Quotes.forEach((quote) => {
-          const destination = response.data.Places.find((place) => {
+          destination = response.data.Places.find((place) => {
             return place.PlaceId === quote.OutboundLeg.DestinationId;
           });
 
           quote.DestinationCity = destination.CityName;
           quote.DestinationCountry = destination.CountryName;
 
-          const carrier = response.data.Carriers.find((carrier) => {
+          carrier = response.data.Carriers.find((carrier) => {
             return carrier.CarrierId === quote.OutboundLeg.CarrierIds[0];
           });
 

@@ -3,14 +3,14 @@ angular
   .controller('MainCtrl', MainCtrl);
 
 MainCtrl.$inject = [];
-function MainCtrl(){
+function MainCtrl() {
   const vm = this;
 
-  vm.all   = [];
+  vm.all = [];
   vm.donut = {};
-  vm.add   = add;
+  vm.add = add;
 
-  function add(){
+  function add() {
     if (vm.donutForm.$valid) {
       vm.all.push(vm.donut);
       vm.donut = {};

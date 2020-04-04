@@ -40,10 +40,11 @@ $(() => {
 
   function startStopTimer() {
     // stop the timer if it is running
-    if(timerIsRunning) {
+    if (timerIsRunning) {
       clearInterval(timerId);
       timerIsRunning = false;
-    } else {
+    }
+    else {
       // start the timer if it is NOT running
       timerId = setInterval(() => {
         timeRemaining--;

@@ -12,7 +12,7 @@ function indexRoute(req, res) {
     });
 }
 
-function newRoute(req, res){
+function newRoute(req, res) {
   res.render('books/new');
 }
 

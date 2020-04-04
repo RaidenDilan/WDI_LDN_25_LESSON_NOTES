@@ -1,4 +1,4 @@
-/* eslint no-unused-vars: "off" */
+'use-strict';
 
 // write a function that returns "Hello World!" if no argument is given, or "Hello <argument>!" otherwise
 // eg: hello() => "Hello World!"; hello("Mike") => "Hello Mike!"
@@ -114,10 +114,10 @@ function secondLowestSecondHighest(array) {
 // eg: coins(1.99) => [100, 50, 20, 20, 5, 2, 2]
 function coins(price) {
   let pence = Math.floor(price * 100);
-  const coins = [100, 50, 20, 10, 5, 2, 1];
+  const penies = [100, 50, 20, 10, 5, 2, 1];
   const result = [];
 
-  coins.forEach((coin) => {
+  penies.forEach((coin) => {
     while (pence - coin >= 0) {
       pence -= coin;
       result.push(coin);
